@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!-- 上方箭头 -->
+
+    <ImageView
+        android:id="@+id/view_arrow_top"
+        android:layout_width="7dp"
+        android:layout_height="3dp"
+        android:src="@drawable/ic_tip_view_anchor_top"
+        app:layout_constraintBottom_toTopOf="@+id/view_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <!-- 下方箭头 -->
+
+    <ImageView
+        android:id="@+id/view_arrow_bottom"
+        android:layout_width="7dp"
+        android:layout_height="3dp"
+        android:src="@drawable/ic_tip_view_anchor_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_content"
+        tools:ignore="ContentDescription" />
+
+
+    <!-- 左方箭头 -->
+
+    <ImageView
+        android:id="@+id/view_arrow_left"
+        android:layout_width="3dp"
+        android:layout_height="7dp"
+        android:src="@drawable/ic_tip_view_anchor_left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+    <!-- 右方箭头 -->
+
+    <ImageView
+        android:id="@+id/view_arrow_right"
+        android:layout_width="3dp"
+        android:layout_height="7dp"
+        android:src="@drawable/ic_tip_view_anchor_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view_content"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <!-- 正文内容 -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_tip_view_background"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/view_arrow_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/view_arrow_right"
+        app:layout_constraintStart_toEndOf="@+id/view_arrow_left"
+        app:layout_constraintTop_toBottomOf="@+id/view_arrow_top">
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="200dp"
+            android:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试"
+            android:textColor="#FFFFFF"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/view_close"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- 关闭按钮 -->
+
+        <ImageView
+            android:id="@+id/view_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_tip_view_close"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

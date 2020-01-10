@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RadiusButton">
+        <attr name="nw_stroke_style" format="flags">
+            <flag name="stroke" value="0x01" />
+            <flag name="fill" value="0x02" />
+        </attr>
+        <attr name="nw_radius_style" format="flags">
+            <flag name="left" value="0x01" />
+            <flag name="right" value="0x02" />
+        </attr>
+        <attr name="nw_theme_color" format="color" />
+        <attr name="nw_disable_color" format="color" />
+    </declare-styleable>
+</resources>
